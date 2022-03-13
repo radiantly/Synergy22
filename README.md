@@ -1,6 +1,6 @@
 ## Setup
 
-Download [Node.js](https://nodejs.org/en/download/). Run the followed commands:
+Download [Node.js](https://nodejs.org/en/download/). Run the following commands:
 
 ```bash
 # Install dependencies (only the first time)
@@ -12,3 +12,7 @@ pnpm run dev
 # Build for production in the dist/ directory
 pnpm run build
 ```
+
+## License
+
+MIT
