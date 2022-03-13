@@ -1,6 +1,6 @@
 import "./style.css";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { TrackballControls } from "three/examples/jsm/controls/TrackballControls.js";
 import { animate } from "popmotion";
 // import * as dat from "dat.gui";
 
@@ -147,7 +147,7 @@ camera.position.z = 6;
 scene.add(camera);
 
 // Controls
-const controls = new OrbitControls(camera, canvas);
+const controls = new TrackballControls(camera, canvas);
 controls.enableDamping = true;
 
 /**
