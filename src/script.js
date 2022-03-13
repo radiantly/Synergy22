@@ -1,6 +1,7 @@
 import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { animate } from "popmotion";
 // import * as dat from "dat.gui";
 
 /**
@@ -22,7 +23,14 @@ const scene = new THREE.Scene();
 /**
  * Textures
  */
-const textureLoader = new THREE.TextureLoader();
+const loadingManager = new THREE.LoadingManager();
+loadingManager.onLoad = () =>
+  animate({
+    from: 0,
+    to: 1,
+    onUpdate: (latest) => (canvas.style.opacity = latest),
+  });
+const textureLoader = new THREE.TextureLoader(loadingManager);
 const matcapRedTexture = textureLoader.load("textures/matcaps/red.png");
 const matcapBlueTexture = textureLoader.load("textures/matcaps/blue.png");
 const matcapYellowTexture = textureLoader.load("textures/matcaps/yellow.png");
@@ -135,7 +143,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.x = 2.5;
 camera.position.y = -0.5;
-camera.position.z = 5.5;
+camera.position.z = 6;
 scene.add(camera);
 
 // Controls

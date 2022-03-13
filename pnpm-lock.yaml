@@ -12,6 +12,7 @@ specifiers:
   html-loader: ^1.3.2
   html-webpack-plugin: ^5.0.0-alpha.7
   mini-css-extract-plugin: ^1.3.4
+  popmotion: ^11.0.3
   portfinder-sync: 0.0.2
   raw-loader: ^4.0.2
   style-loader: ^2.0.0
@@ -33,6 +34,7 @@ dependencies:
   html-loader: 1.3.2_webpack@5.70.0
   html-webpack-plugin: 5.5.0_webpack@5.70.0
   mini-css-extract-plugin: 1.6.2_webpack@5.70.0
+  popmotion: 11.0.3
   portfinder-sync: 0.0.2
   raw-loader: 4.0.2_webpack@5.70.0
   style-loader: 2.0.0_webpack@5.70.0
@@ -2670,6 +2672,12 @@ packages:
       map-cache: 0.2.2
     dev: false
 
+  /framesync/6.0.1:
+    resolution: {integrity: sha512-fUY88kXvGiIItgNC7wcTOl0SNRCVXMKSWW2Yzfmn7EKNc+MpCzcz9DhdHcdjbrtN3c6R4H5dTY2jiCpPdysEjA==}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
+
   /fresh/0.5.2:
     resolution: {integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=}
     engines: {node: '>= 0.6'}
@@ -2858,6 +2866,10 @@ packages:
   /he/1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
+    dev: false
+
+  /hey-listen/1.0.8:
+    resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
     dev: false
 
   /hpack.js/2.1.6:
@@ -3946,6 +3958,15 @@ packages:
       find-up: 4.1.0
     dev: false
 
+  /popmotion/11.0.3:
+    resolution: {integrity: sha512-Y55FLdj3UxkR7Vl3s7Qr4e9m0onSnP8W7d/xQLsoJM40vs6UKHFdygs6SWryasTZYqugMjm3BepCF4CWXDiHgA==}
+    dependencies:
+      framesync: 6.0.1
+      hey-listen: 1.0.8
+      style-value-types: 5.0.0
+      tslib: 2.3.1
+    dev: false
+
   /portfinder-sync/0.0.2:
     resolution: {integrity: sha1-bjQJpzpxhDbeBTrJSThTUMqr2KI=}
     dependencies:
@@ -4721,6 +4742,13 @@ packages:
       loader-utils: 2.0.2
       schema-utils: 3.1.1
       webpack: 5.70.0_webpack-cli@4.9.2
+    dev: false
+
+  /style-value-types/5.0.0:
+    resolution: {integrity: sha512-08yq36Ikn4kx4YU6RD7jWEv27v4V+PUsOGa4n/as8Et3CuODMJQ00ENeAVXAeydX4Z2j1XHZF1K2sX4mGl18fA==}
+    dependencies:
+      hey-listen: 1.0.8
+      tslib: 2.3.1
     dev: false
 
   /supports-color/5.5.0:
