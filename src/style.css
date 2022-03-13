@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("fonts/BebasNeue-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Regular-v1.27.woff2");
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/GoogleSans-Medium-v1.27.woff2");
+  font-weight: 500;
+}
+
+:root {
+  --not-black: #474747;
+  --red: #ea4335;
+  --blue: #4285f4;
+  --green: #34a853;
+  --purple: #6f42c1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +30,14 @@
 html,
 body {
   overflow: hidden;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .webgl {
@@ -14,4 +46,117 @@ body {
   left: 0;
   outline: none;
   opacity: 0;
+}
+
+.container {
+  width: min(750px, 90vw);
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 42;
+  color: var(--not-black);
+  text-align: center;
+  padding: 35px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .title {
+  font-family: "Bebas Neue";
+  font-size: 42px;
+}
+
+.container .date {
+  font-family: "Google Sans";
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--red);
+}
+
+.container .para {
+  font-family: "Google Sans";
+  font-size: 20px;
+  max-width: 600px;
+  line-height: 30px;
+  padding: 25px;
+}
+
+.container .btn-row {
+  font-family: "Bebas Neue";
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.container .btn-row a {
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+  border: 3px solid var(--red);
+  min-width: 190px;
+  padding: 5px;
+}
+
+.container .btn-row a {
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+  border: 3px solid var(--red);
+  min-width: 190px;
+  padding: 5px;
+}
+
+.container .btn-row a.secondary {
+  background-color: white;
+  color: var(--red);
+}
+
+.container .btn-row a.primary {
+  background-color: var(--red);
+  color: white;
+}
+
+.credits {
+  position: fixed;
+  z-index: 13;
+  font-family: "Google Sans";
+  bottom: 15px;
+  color: var(--not-black);
+  opacity: 0.4;
+  transition: opacity 0.25s ease-in;
+}
+
+.credits:hover {
+  opacity: 0.8;
+}
+
+.credits a {
+  color: inherit;
+  text-decoration: underline dotted;
+}
+
+.credits a:hover {
+  text-decoration: underline solid;
+}
+
+.credits a.gdsc:hover {
+  color: var(--blue);
+}
+
+.credits a.se:hover {
+  color: var(--green);
+}
+
+.credits a.radiantly:hover {
+  color: var(--purple);
+}
+
+@media screen and (max-width: 600px) {
+  .container .btn-row {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
