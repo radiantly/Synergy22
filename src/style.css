@@ -123,10 +123,12 @@ body {
   position: fixed;
   z-index: 13;
   font-family: "Google Sans";
-  bottom: 15px;
+  bottom: 0;
   color: var(--not-black);
   opacity: 0.4;
   transition: opacity 0.25s ease-in;
+  padding: 15px 5px;
+  text-align: center;
 }
 
 .credits:hover {

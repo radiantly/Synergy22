@@ -169,8 +169,9 @@ const clock = new THREE.Clock();
 
 const tick = () => {
   // const elapsedTime = clock.getElapsedTime();
-  const velocity = clock.getDelta() * 0.15;
+  const velocity = clock.getDelta() * 0.1;
   for (let i = 0; i < cubes.length; i++) {
+    cubes[i].rotation.y += velocity * ((i % 10) / 10);
     cubes[i].rotation.z += velocity;
   }
 
