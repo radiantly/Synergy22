@@ -3,6 +3,6 @@
   to = "/brochure.pdf"
   status = 200
 
+[[redirects]]
   from = "/register"
   to = "https://nirmalkarthikeyan.typeform.com/to/YGTSe31n"
-  status = 200
