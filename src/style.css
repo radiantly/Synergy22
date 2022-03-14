@@ -91,6 +91,14 @@ body {
   gap: 30px;
 }
 
+.container .btn-row a:hover {
+  --red: #df1100;
+}
+
+.container .btn-row a:active {
+  transform: translateY(1px);
+}
+
 .container .btn-row a {
   text-decoration: none;
   display: block;
@@ -98,6 +106,7 @@ body {
   border: 3px solid var(--red);
   min-width: 190px;
   padding: 5px;
+  transition: all 0.25s ease;
 }
 
 .container .btn-row a {
