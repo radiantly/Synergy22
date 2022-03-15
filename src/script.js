@@ -1,6 +1,8 @@
 import "./style.css";
 import * as THREE from "three";
 import { TrackballControls } from "three/examples/jsm/controls/TrackballControls.js";
+import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { animate } from "popmotion";
 // import * as dat from "dat.gui";
 
@@ -39,10 +41,10 @@ const matcapGreenTexture = textureLoader.load("textures/matcaps/7.png");
 /**
  * Fonts
  */
-const fontLoader = new THREE.FontLoader();
+const fontLoader = new FontLoader();
 fontLoader.load("fonts/Bebas Neue_Regular.typeface.json", (font) => {
   console.log(font);
-  const textGeometry = new THREE.TextBufferGeometry("SYNERGY '22", {
+  const textGeometry = new TextGeometry("SYNERGY '22", {
     font,
     size: 0.5,
     height: 0.2,
@@ -183,7 +185,6 @@ const tick = () => {
 
   // Call tick again on the next frame
   window.requestAnimationFrame(tick);
-  // console.log(camera.position);
 };
 
 tick();
