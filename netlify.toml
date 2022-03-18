@@ -9,8 +9,7 @@
 
 [[redirects]]
   from = "/inauguration"
-  to = "/fallback/"
-  status = 200
+  to = "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDBjN2M1YmMtZjJiMS00M2VmLWEwYjktYTU1YzVhYzRkNGY5%40thread.v2/0?context=%7b%22Tid%22%3a%2200f9cda3-075e-44e5-aa0b-aba3add6539f%22%2c%22Oid%22%3a%22d721681b-7ad3-4b5c-b2c3-a012369e365f%22%7d"
 
 [[redirects]]
   from = "/gitworkshop"
