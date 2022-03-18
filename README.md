@@ -1,3 +1,5 @@
+![Header](.github/header.png)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c4d90edc-a3da-4237-99a0-adf2c21aa928/deploy-status)](https://app.netlify.com/sites/synergyhack22/deploys)
 
 ## Setup
