@@ -4,7 +4,10 @@ const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: path.resolve(__dirname, "../src/script.js"),
+  entry: {
+    main: path.resolve(__dirname, "../src/script.js"),
+    fallback: path.resolve(__dirname, "../src/fallback/script.js"),
+  },
   output: {
     filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
@@ -16,6 +19,13 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
+      chunks: ["main"],
+      minify: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: "fallback/index.html",
+      template: path.resolve(__dirname, "../src/fallback/index.html"),
+      chunks: ["fallback"],
       minify: true,
     }),
     new MiniCSSExtractPlugin(),

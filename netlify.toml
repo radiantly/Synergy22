@@ -6,3 +6,23 @@
 [[redirects]]
   from = "/register"
   to = "https://nirmalkarthikeyan.typeform.com/to/YGTSe31n"
+
+[[redirects]]
+  from = "/inauguration"
+  to = "/fallback/"
+  status = 200
+
+[[redirects]]
+  from = "/gitworkshop"
+  to = "/fallback/"
+  status = 200
+  
+[[redirects]]
+  from = "/webworkshop"
+  to = "/fallback/"
+  status = 200
+
+[[redirects]]
+  from = "/appdevworkshop"
+  to = "/fallback/"
+  status = 200
